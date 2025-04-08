@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYSE Agri & Food Private Limited</title>
+    <style>
+        :root {
+            --primary-color: #3a7d44;
+            --secondary-color: #6fb77e;
+            --accent-color: #d4e9d7;
+            --dark-color: #2c3e50;
+            --light-color: #f8f9fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--light-color);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: var(--primary-color);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .brand {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 20px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 10px;
+            border-radius: 4px;
+            transition: background-color 0.05s;
+        }
+        
+        .nav-links a:hover, .nav-links a.active {
+            background-color: var(--secondary-color);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/api/placeholder/1200/500');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+            margin-bottom: 40px;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Sections */
+        .section {
+            padding: 60px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .section-title {
+            font-size: 32px;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .section-content {
+            margin-bottom: 30px;
+        }
+        
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--secondary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timeline-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -12px;
+            background-color: white;
+            border: 4px solid var(--secondary-color);
+            top: 20px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -12px;
+        }
+        
+        /* Cards */
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        
+        .card {
+            flex: 1 0 300px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-img {
+            height: 200px;
+            background-color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .card-img img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        
+        .card-content {
+            padding: 20px;
+        }
+        
+        .card-title {
+            font-size: 20px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        /* Form */
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: var(--dark-color);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section {
+            flex: 1 0 300px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+        }
+        
+        .footer-section p, .footer-section a {
+            color: #bbb;
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+        }
+        
+        .footer-section a:hover {
+            color: white;
+        }
+        
+        .map-container {
+            height: 200px;
+            background-color: #4a4a4a;
+            border-radius: 4px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #4a4a4a;
+            color: #bbb;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+            }
+            
+            .nav-links {
+                margin-top: 15px;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 25px;
+            }
+            
+            .timeline-item::after {
+                left: 15px;
+                right: auto;
+            }
+        }
+
+        .styled-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 60px auto;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+
+        .divider-line {
+            height: 3px;
+            flex-grow: 1;
+            background: linear-gradient(to right, 
+                rgba(58, 125, 68, 0.1), 
+                rgba(58, 125, 68, 0.8) 20%, 
+                rgba(58, 125, 68, 0.8) 80%, 
+                rgba(58, 125, 68, 0.1));
+        }
+
+        .divider-icon {
+            color: var(--primary-color);
+            font-size: 24px;
+            margin: 0 20px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <a href="index.html" class="brand">NYSE Agri & Food Private Limited</a>
+            <ul class="nav-links">
+                <li><a href="Home.html" class="active">Home</a></li>
+                <li><a href="opportunity.html">Opportunities</a></li>
+                <li><a href="apply.html">Apply Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="content">      
+        <!-- HOME PAGE CONTENT -->
+        <div id="home-content">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="container">
+                    <h1>Sustainable Manufacturing for a Greener Future</h1>
+                    <p>RECYCLERS OF COCONUT SHELLS</p>
+                </div>
+            </section>
+            <!-- About Us Section -->
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">About Us</h2>
+                    <div class="section-content">
+                        <p>
+                            <span>NYSE Agri & Food Private Limited, incorporated in 2017 (CIN: U74999PN2017PTC171054), is a DPIIT-certified startup recognized under the Startup India program (DIPP132914). Our company is dedicated to the research, development, extraction, trading, and processing of high-quality agricultural and food products.</span><br><br>
+                            
+                            <span>We have built a strong reputation in the coconut processing industry by producing premium-grade Virgin and Extra Virgin Coconut Oil with an extended shelf life of 5 years. In addition to oil extraction, we create various value-added coconut products using the finest coconuts available.</span>
+                            
+                            <span>From day one, we have been mindful of the environmental challenges posed by agricultural waste—particularly coconut shells, which are often burnt and release harmful gases like carbon dioxide and methane. In response, we've turned this problem into an opportunity.</span><br><br>
+                            
+                            <span>In 2024, we launched a Coconut Shell Recycling Plant in Ahilyanagar (formerly Ahmednagar), Maharashtra, with an initial recycling capacity of 750 kg/day. Due to increased demand and positive community response, we proudly scaled our operations to 3000 kg/day as of April 1, 2025.</span>
+                            
+                            <span>This expansion is part of our larger mission: "Clean City – Green City." We are committed to reducing pollution caused by coconut waste and preserving natural resources by promoting responsible recycling practices at scale.</span><br><br>
+                            
+                            <span>Our collection network now spans across several states, including Maharashtra, Goa, Madhya Pradesh, Gujarat, Rajasthan, Delhi, and Uttar Pradesh. Through these efforts, we support local employment, reduce environmental hazards, and contribute to a more sustainable future.</span>
+                            
+                            <span>To encourage participation, we offer a payment of up to ₹11.50 per kg for coconut shells. This initiative helps individuals and communities generate income, support green practices, and take part in a growing eco-conscious movement.</span><br><br>
+                            
+                            <span>We are proud to call ourselves the "Recyclers of Coconut Shells." Our commitment extends beyond business—we aim to make a positive impact on society, the environment, and future generations.</span>
+                            
+                            
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- Divider Section -->
+            <div class="styled-divider">
+                <div class="divider-line"></div>
+                <div class="divider-icon">♦</div>
+                <div class="divider-line"></div>
+            </div>
+            <!-- Journey Section -->
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">Our Journey</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>2017</h3>
+                                <p>Incorporation of Company</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>2018</h3>
+                                <p>Identification of World's Best Coconuts</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>2019</h3>
+                                <p>Research & Development on the Best Coconuts</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>2020</h3>
+                                <p>Developed the Wet Process for Extraction of Transparent Coconut Oil from Coconut Milk</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>2021-2023</h3>
+                                <p>Worked to Increase Shelf life of the Virgin Coconut Oil</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>2024</h3>
+                                <p>Succeeded in Increasing the Shelf Life of Coconut Oil to 5 Years. Also worked against the Pollution of Coconut Shells in Ahmednagar</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>2025</h3>
+                                <p>oined the mission to evade pollution of Coconut Shells across many states & increased the recycling capacity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+             <!-- Divider Section -->
+            <div class="styled-divider">
+                <div class="divider-line"></div>
+                <div class="divider-icon">♦</div>
+                <div class="divider-line"></div>
+            </div>
+            <!-- Why We? Section -->
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">Why We?</h2>
+                    <div class="section-content">
+                        <p>The company is engaged in the Research & Development, Extraction, Trading & Processing of the Agricultural and Food Products. The company is highly specialised in processing of Coconuts like Extraction of Virgin Coconut Oil, Extra Virgin Coconut Oil with the shelf life of 5 years and other valuable products. The company is also indulged in trading of Agricultural commodities by making value addition.</p>
+                        <p>Under the mission "Clean City - Green City" we installed a Recycling Plant for Coconut Shells in Ahmednagar with a capacity of 3.0 Metric Tons/day.</p>
+                        <p>We collect & recycle the coconut shells with the help of the agencies outsourced at these cities across many states. Currently we are collecting and recycling coconut shells around 750 kgs/day. The recycled coconut shells are processed in such a way that they attain the final decomposition in 40 days or in the usable extent. The product is rich in natural fertilisers & nutrients which is supplied to the farmers on the subsidised rates which indirectly supports them for natural and organic farming.</p>
+                        <p>The company is interested in working at the bottom-most levels to reduce the pollution in many cities. So we have started our services for lifting the Coconut Shells across all cities of Maharashtra, Goa, Madhya Pradesh, Gujarat, Rajasthan, Delhi and Uttar Pradesh states.Ahmednagar city is geographically located between Mumbai, Pune, Thane, Nashik, Aurangabad (Chattrapati Sambhajinagar), Solapur, Beed & Dharashiv (Osmanabad).
+                            </p>
+                    </div>
+                </div>
+            </section>
+        </div>    
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: nyseagrifood@gmail.com</p>
+                    <p>Phone: +91 99754 - 22754</p>
+                    <p>Address:</p>
+                    <p>S.no.10 ,PLOT NO. 62 & 63
+                        </p>
+                        <p>
+                        60 feet road, near Talathi office,
+                        </p>
+                        
+                    <p>Bhistbaug, Ahmednagar - 414003</p>
+                    <p>Maharashtra, India</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="Home.html">Home</a>
+                    <a href="opportunity.html">Opportunities</a>
+                    <a href="apply.html">Apply Now</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Location</h3>
+                    <div class="map-container">
+                        <!-- Map integration -->
+                        <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d861.4235843423755!2d74.72537119978685!3d19.12306990000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdcbb9dba6206e3%3A0xf4cb5674d05dfb11!2sTalathi%20Office%20Savedi%20Bhistbag!5e1!3m2!1sen!2sin!4v1744029286784!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 NYSE Agri & Food Pvt. Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+  
+</body>
+</html>
