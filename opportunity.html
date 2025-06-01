@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoFactory - Opportunities</title>
+    <title>NYSE Agri & Food Private Limited-Opportunity</title>
     <style>
         :root {
             --primary-color: #3a7d44;
@@ -56,6 +56,14 @@
             text-decoration: none;
         }
         
+         .navbar-logo {
+            height: 40px; /* Adjust this value to your desired logo height */
+            width: auto;  /* Keeps the aspect ratio */
+            margin-right: 10px; /* Optional: if you have text next to the logo */
+            vertical-align: middle; /* Good for inline-block elements */
+            border-radius: 50%;
+        }
+
         .nav-links {
             display: flex;
             list-style: none;
@@ -78,23 +86,24 @@
         }
 
         /* Hero Section */
-        .hero {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/api/placeholder/1200/500');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 80px 0;
+        .hero-product {
+            background: linear-gradient(rgba(58,125,68,0.7),rgba(58,125,68,0.5)), url('images/coconut-hero.jpg') center/cover no-repeat;
+            color: #fff;
+            border-radius: 12px;
             margin-bottom: 40px;
+            padding: 60px 30px 50px 30px;
+            text-align: center;
         }
         
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
+        .hero-product h1 {
+            color: var(--primary-color) !important;
+            font-size: 2.8em;
+            margin-bottom: 18px;
+            letter-spacing: 1px;
         }
         
-        .hero p {
-            font-size: 20px;
+        .hero-product p {
+            font-size: 1.25em;
             max-width: 700px;
             margin: 0 auto;
         }
@@ -124,6 +133,8 @@
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
         }
 
         .opportunity-card:hover {
@@ -131,7 +142,7 @@
         }
 
         .opportunity-image {
-            height: 200px;
+            height: 300px;
             background-color: var(--accent-color);
             position: relative;
             overflow: hidden;
@@ -140,11 +151,14 @@
         .opportunity-image img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: fit;
         }
 
         .opportunity-content {
             padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .opportunity-title {
@@ -194,6 +208,13 @@
 
         .btn-apply:hover {
             background-color: var(--secondary-color);
+        }
+
+        .card-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: auto;
         }
 
         .comparison-table {
@@ -297,30 +318,31 @@
 <body>
     <nav>
         <div class="container nav-container">
-            <a href="index.html" class="brand">NYSE Agri & Food Private Limited</a>
+            <a href="index.html" class="brand">
+                <img src="images/logo.png" alt="NYSE Agri & Food Logo" class="navbar-logo">
+                NYSE Agri & Food Private Limited</a>
             <ul class="nav-links">
                 <li><a href="Home.html" >Home</a></li>
-                <li><a href="opportunity.html"class="active">Opportunities</a></li>
-                <li><a href="apply.html">Apply Now</a></li>
+                <li><a href="opportunity.html" class="active">Opportunities</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="apply.html" >Contact Us</a></li>
             </ul>
         </div>
     </nav>
 
-    <div class="hero">
-        <div class="container">
-            <h1>Growth Opportunities</h1>
-            <p>Join the sustainable eco-friendly revolution with multiple partnership models</p>
-        </div>
+    <div class="hero-product" style="background: linear-gradient(rgba(58,125,68,0.7),rgba(58,125,68,0.5)), url('images/coconut-hero.jpg') center/cover no-repeat; color: #fff; border-radius: 12px; margin-bottom: 40px; padding: 60px 30px 50px 30px; text-align: center;">
+        <h1 style="color: var(--primary-color); font-size: 2.8em; margin-bottom: 18px; letter-spacing: 1px;">Growth Opportunities</h1>
+        <p style="font-size: 1.25em; max-width: 700px; margin: 0 auto;">Join the sustainable eco-friendly revolution with multiple partnership models</p>
     </div>
 
     <div class="container">
-        <section class="careers-section">
+        <section class="careers-section" style="background: #f8f9fa; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 36px 24px; margin-bottom: 40px;">
             <h2 class="section-title">Partnership Opportunities</h2>
             
             <div class="opportunities-grid">
                 <div class="opportunity-card">
                     <div class="opportunity-image">
-                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Collection Services" width="400" height="200">  </div>
+                        <img src="images\hotel-temple-image.jpg" alt="Collection Services" width="400" height="100">  </div>
                     <div class="opportunity-content">
                         <h3 class="opportunity-title">Franchisee : Hotels/ Temples</h3>
                         <p class="opportunity-description">Join our network of Franchise : Hotels/ Temples collecting and recycling coconut shells.</p>
@@ -357,14 +379,21 @@
                                 <span class="detail-icon">💳</span>
                                 <span>Payment: Direct bank transfer within 48hrs</span>
                             </div>
+                            <div class="detail-item">
+                                <span class="detail-icon">📋</span>
+                                <span>Required: Aadhar Card, PAN Card, Photos, Bank Details</span>
+                            </div>
                         </div>
-                        <a href="apply.html" class="btn-apply">Apply Now</a>
+                        <div class="card-actions">
+                            <a href="apply.html" class="btn-apply" target="_blank">Contact Us</a>
+                            <a href="income-hotels-temples.html" class="btn-apply" target="_blank">View Details</a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="opportunity-card">
                     <div class="opportunity-image">
-                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Collection Services" width="400" height="200">
+                        <img src="images\service-collection.jpg" alt="Collection Services" width="400" height="200">
                     </div>
                     <div class="opportunity-content">
                         <h3 class="opportunity-title">Franchisee: Services-Collection</h3>
@@ -411,7 +440,10 @@
                                 <span>Required: Aadhar Card, PAN Card, Photos, Bank Details</span>
                             </div>
                         </div>
-                        <a href="apply.html" class="btn-apply">Apply Now</a>
+                        <div class="card-actions">
+                            <a href="apply.html" class="btn-apply" target="_blank">Contact Us</a>
+                            <a href="income-services-collection.html" class="btn-apply" target="_blank">View Details</a>
+                        </div>
                     </div>
                 </div>
 
@@ -460,272 +492,26 @@
                                 <span>Required: Aadhar Card, PAN Card, Photos, Bank Details</span>
                             </div>
                         </div>
-                        <a href="apply.html" class="btn-apply">Apply Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <h3 class="section-title">Detailed Income Guidelines</h3>
-            <div class="income-tables">
-                <style>
-                    .income-tables {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 40px;
-                        margin: 40px 0;
-                    }
-                    
-                    .income-section {
-                        background: white;
-                        border-radius: 10px;
-                        overflow: hidden;
-                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                        margin: 0 auto;
-                        max-width: 800px;
-                        width: 100%;
-                    }
-
-                    .income-header {
-                        padding: 15px 20px;
-                        text-align: center;
-                        font-size: 24px;
-                        font-weight: bold;
-                    }
-
-                    .hotels-temples {
-                        background-color: #d4cdb4;
-                    }
-
-                    .services-collection {
-                        background-color: #ffc107;
-                    }
-
-                    .cf-agent {
-                        background-color: #f8d7da;
-                    }
-
-                    .income-content {
-                        padding: 20px;
-                    }
-
-                    .fee-row {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        padding: 10px 0;
-                        border-bottom: 1px solid #eee;
-                    }
-
-                    .income-table {
-                        width: 100%;
-                        border-collapse: collapse;
-                        margin-top: 20px;
-                    }
-
-                    .income-table th, .income-table td {
-                        padding: 12px;
-                        text-align: left;
-                        border-bottom: 1px solid #eee;
-                    }
-
-                    .income-table th {
-                        background-color: #f8f9fa;
-                    }
-
-                    .income-note {
-                        margin-top: 15px;
-                        padding: 10px;
-                        background-color: #f8f9fa;
-                        border-radius: 4px;
-                        font-size: 14px;
-                    }
-
-                    .description {
-                        margin: 15px 0;
-                        line-height: 1.6;
-                    }
-                </style>
-
-                <!-- Hotels/Temples Section -->
-                <div class="income-section">
-                    <div class="income-header hotels-temples">
-                        FRANCHISEE : HOTELS / TEMPLES
-                    </div>
-                    <div class="income-content">
-                        <div class="fee-row">
-                            <strong>Franchisee Fee (Refundable):</strong>
-                            <span>Rs. 40000</span>
+                        <div class="card-actions">
+                            <a href="apply.html" class="btn-apply" target="_blank">Contact Us</a>
+                            <a href="income-cf-agent.html" class="btn-apply" target="_blank">View Details</a>
                         </div>
-                        <div class="description">
-                            We buy the Coconut Shells @ Rs 10/- Kgs of your Franchisee Point. Franchisee Point will raise an invoice for the payment @ Rs. 10/- per Kgs. The Franchisee Point has to supply the coconut shells to the C&F Point.
-                        </div>
-                        <table class="income-table">
-                            <thead>
-                                <tr>
-                                    <th>Particulars</th>
-                                    <th>Kgs</th>
-                                    <th>Kgs</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Average Daily Collection of Shells</td>
-                                    <td>100</td>
-                                    <td>200</td>
-                                </tr>
-                                <tr>
-                                    <td>Rate Rs./per Kg.</td>
-                                    <td>10</td>
-                                    <td>10</td>
-                                </tr>
-                                <tr>
-                                    <td>Daily Income in Rs.</td>
-                                    <td>1000</td>
-                                    <td>2000</td>
-                                </tr>
-                                <tr>
-                                    <td>Monthly Income in Rs.</td>
-                                    <td>30000</td>
-                                    <td>60000</td>
-                                </tr>
-                                <tr>
-                                    <td>Annual Income in Rs.</td>
-                                    <td>360000</td>
-                                    <td>720000</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="income-note">
-                            ***Franchisee Point can earn additional Rs. 1.50/- per Kg. for the collected material if sent directly to the Central HUB Ahmednagar
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Services Collection Section -->
-                <div class="income-section">
-                    <div class="income-header services-collection">
-                        FRANCHISEE : SERVICES - COLLECTION
-                    </div>
-                    <div class="income-content">
-                        <div class="fee-row">
-                            <strong>Franchisee Fee (Refundable):</strong>
-                            <span>Rs. 50000</span>
-                        </div>
-                        <div class="description">
-                            We buy the Coconut Shells @ Rs 10/- Kgs of your Franchisee Point. Franchisee will Purchase the Coconut Shells from the Source @ Rs. 4/- per Kgs. A margin of Rs. 6/- per Kgs will be loaded by the Franchisee Point. Franchisee Point will raise an invoice for the payment @ Rs. 10/- per kgs. The Franchisee Point has to supply the coconut shells to the C&F Point.
-                        </div>
-                        <table class="income-table">
-                            <thead>
-                                <tr>
-                                    <th>Particulars</th>
-                                    <th>Kgs</th>
-                                    <th>Kgs</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Average Daily Collection of Shells</td>
-                                    <td>200</td>
-                                    <td>500</td>
-                                </tr>
-                                <tr>
-                                    <td>Margin in Rs./per Kg.</td>
-                                    <td>6</td>
-                                    <td>6</td>
-                                </tr>
-                                <tr>
-                                    <td>Daily Income in Rs.</td>
-                                    <td>1200</td>
-                                    <td>3000</td>
-                                </tr>
-                                <tr>
-                                    <td>Monthly Income in Rs.</td>
-                                    <td>36000</td>
-                                    <td>90000</td>
-                                </tr>
-                                <tr>
-                                    <td>Annual Income in Rs.</td>
-                                    <td>432000</td>
-                                    <td>1080000</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="income-note">
-                            ***Franchisee Point can earn additional Rs. 1.50/- per Kg. for the collected material if sent directly to the Central HUB Ahmednagar
-                        </div>
-                    </div>
-                </div>
-
-                <!-- C&F Agent Section -->
-                <div class="income-section">
-                    <div class="income-header cf-agent">
-                        C&F AGENT
-                    </div>
-                    <div class="income-content">
-                        <div class="fee-row">
-                            <strong>C&F Point Fee (Refundable):</strong>
-                            <span>Rs. 1000000</span>
-                        </div>
-                        <div class="description">
-                            The Coconut Shells collected by the Franchisee Point will be finally received at the C&F Point. The C&F Point will dispatch the collected material to the Central HUB at Ahmednagar. A margin of Rs. 1/- per Kg will be paid for carrying and forwarding.
-                        </div>
-                        <table class="income-table">
-                            <thead>
-                                <tr>
-                                    <th>Particulars</th>
-                                    <th>Kgs</th>
-                                    <th>Kgs</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Average Daily Collection of Shells</td>
-                                    <td>10000</td>
-                                    <td>20000</td>
-                                </tr>
-                                <tr>
-                                    <td>Margin in Rs./per Kg.</td>
-                                    <td>1</td>
-                                    <td>1</td>
-                                </tr>
-                                <tr>
-                                    <td>Daily Income in Rs.</td>
-                                    <td>10000</td>
-                                    <td>20000</td>
-                                </tr>
-                                <tr>
-                                    <td>Monthly Income in Rs.</td>
-                                    <td>300000</td>
-                                    <td>600000</td>
-                                </tr>
-                                <tr>
-                                    <td>Annual Income in Rs.</td>
-                                    <td>3600000</td>
-                                    <td>7200000</td>
-                                </tr>
-                            </tbody>
-                        </table>
                     </div>
                 </div>
             </div>
         </section>
     </div>
 
-    <footer>
+      <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Contact Us</h3>
-                    <p>Email: nyseagrifood@gmail.com</p>
-                    <p>Phone: +91 99754 - 22754</p>
+                    <p>Email: nyseagrifood1@gmail.com</p>
+                    <p>Phone: +91 86028-10170</p>
                     <p>Address:</p>
-                    <p>S.no.10 ,PLOT NO. 62 & 63
-                        </p>
-                        <p>
-                        60 feet road, near Talathi office,
-                        </p>
+                    <p>Jai Bhavani Nagar, Sambhaji Nagar, Bhistabag, Ahmadnagar, Maharashtra 414003</p>
                         
-                    <p>Bhistbaug, Ahmednagar - 414003</p>
                     <p>Maharashtra, India</p>
                 </div>
                 
@@ -733,21 +519,23 @@
                     <h3>Quick Links</h3>
                     <a href="Home.html">Home</a>
                     <a href="opportunity.html">Opportunities</a>
-                    <a href="apply.html">Apply Now</a>
+                    <a href="product.html">Product</a>
+                    <a href="apply.html">Contact Us</a>
                 </div>
                 
                 <div class="footer-section">
                     <h3>Our Location</h3>
                     <div class="map-container">
-                        <!--  Map integration -->
-                        <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d861.4235843423755!2d74.72537119978685!3d19.12306990000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdcbb9dba6206e3%3A0xf4cb5674d05dfb11!2sTalathi%20Office%20Savedi%20Bhistbag!5e1!3m2!1sen!2sin!4v1744029286784!5m2!1sen!2sin" 
-                            width="100%" 
-                            height="100%" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy">
-                        </iframe>
+                        <!-- Map integration -->
+<iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.4197967428204!2d74.73118617520684!3d19.136231682080783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdcbb8ce69fc8b1%3A0x5e1898d85940f231!2sNYSE%20AGRI%20AND%20FOOD%20Pvt.Ltd.!5e1!3m2!1sen!2sin!4v1748607125574!5m2!1sen!2sin"
+    width="100%"
+    height="100%"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
                     </div>
                 </div>
             </div>
@@ -757,5 +545,7 @@
             </div>
         </div>
     </footer>
+    
+  
 </body>
 </html> 

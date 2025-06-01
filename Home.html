@@ -56,6 +56,13 @@
             text-decoration: none;
         }
         
+          .navbar-logo {
+            height: 40px; /* Adjust this value to your desired logo height */
+            width: auto;  /* Keeps the aspect ratio */
+            margin-right: 10px; /* Optional: if you have text next to the logo */
+            vertical-align: middle; /* Good for inline-block elements */
+            border-radius: 50%;
+        }
         .nav-links {
             display: flex;
             list-style: none;
@@ -91,6 +98,7 @@
         .hero h1 {
             font-size: 48px;
             margin-bottom: 20px;
+            color: var(--primary-color);
         }
         
         .hero p {
@@ -161,6 +169,9 @@
         .timeline-content h3 {
             color: var(--primary-color);
             margin-bottom: 10px;
+        }
+        .timeline-content p,.section-content p {
+            text-align: justify;
         }
         
         .timeline-item::after {
@@ -388,129 +399,81 @@
     <!-- Navigation -->
     <nav>
         <div class="container nav-container">
-            <a href="index.html" class="brand">NYSE Agri & Food Private Limited</a>
+            <a href="index.html" class="brand">
+                <img src="images/logo.png" alt="NYSE Agri & Food Logo" class="navbar-logo">
+                NYSE Agri & Food Private Limited</a>
             <ul class="nav-links">
                 <li><a href="Home.html" class="active">Home</a></li>
                 <li><a href="opportunity.html">Opportunities</a></li>
-                <li><a href="apply.html">Apply Now</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="apply.html">Contact Us</a></li>
             </ul>
         </div>
     </nav>
 
-    <div id="content">      
-        <!-- HOME PAGE CONTENT -->
-        <div id="home-content">
-            <!-- Hero Section -->
-            <section class="hero">
-                <div class="container">
-                    <h1>Sustainable Manufacturing for a Greener Future</h1>
-                    <p>RECYCLERS OF COCONUT SHELLS</p>
-                </div>
-            </section>
-            <!-- About Us Section -->
-            <section class="section">
-                <div class="container">
-                    <h2 class="section-title">About Us</h2>
-                    <div class="section-content">
-                        <p>
-                            <span>NYSE Agri & Food Private Limited, incorporated in 2017 (CIN: U74999PN2017PTC171054), is a DPIIT-certified startup recognized under the Startup India program (DIPP132914). Our company is dedicated to the research, development, extraction, trading, and processing of high-quality agricultural and food products.</span><br><br>
-                            
-                            <span>We have built a strong reputation in the coconut processing industry by producing premium-grade Virgin and Extra Virgin Coconut Oil with an extended shelf life of 5 years. In addition to oil extraction, we create various value-added coconut products using the finest coconuts available.</span>
-                            
-                            <span>From day one, we have been mindful of the environmental challenges posed by agricultural waste—particularly coconut shells, which are often burnt and release harmful gases like carbon dioxide and methane. In response, we've turned this problem into an opportunity.</span><br><br>
-                            
-                            <span>In 2024, we launched a Coconut Shell Recycling Plant in Ahilyanagar (formerly Ahmednagar), Maharashtra, with an initial recycling capacity of 750 kg/day. Due to increased demand and positive community response, we proudly scaled our operations to 3000 kg/day as of April 1, 2025.</span>
-                            
-                            <span>This expansion is part of our larger mission: "Clean City – Green City." We are committed to reducing pollution caused by coconut waste and preserving natural resources by promoting responsible recycling practices at scale.</span><br><br>
-                            
-                            <span>Our collection network now spans across several states, including Maharashtra, Goa, Madhya Pradesh, Gujarat, Rajasthan, Delhi, and Uttar Pradesh. Through these efforts, we support local employment, reduce environmental hazards, and contribute to a more sustainable future.</span>
-                            
-                            <span>To encourage participation, we offer a payment of up to ₹11.50 per kg for coconut shells. This initiative helps individuals and communities generate income, support green practices, and take part in a growing eco-conscious movement.</span><br><br>
-                            
-                            <span>We are proud to call ourselves the "Recyclers of Coconut Shells." Our commitment extends beyond business—we aim to make a positive impact on society, the environment, and future generations.</span>
-                            
-                            
-                        </p>
-                    </div>
-                </div>
-            </section>
-            <!-- Divider Section -->
-            <div class="styled-divider">
-                <div class="divider-line"></div>
-                <div class="divider-icon">♦</div>
-                <div class="divider-line"></div>
-            </div>
-            <!-- Journey Section -->
-            <section class="section">
-                <div class="container">
-                    <h2 class="section-title">Our Journey</h2>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <h3>2017</h3>
-                                <p>Incorporation of Company</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <h3>2018</h3>
-                                <p>Identification of World's Best Coconuts</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <h3>2019</h3>
-                                <p>Research & Development on the Best Coconuts</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <h3>2020</h3>
-                                <p>Developed the Wet Process for Extraction of Transparent Coconut Oil from Coconut Milk</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <h3>2021-2023</h3>
-                                <p>Worked to Increase Shelf life of the Virgin Coconut Oil</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <h3>2024</h3>
-                                <p>Succeeded in Increasing the Shelf Life of Coconut Oil to 5 Years. Also worked against the Pollution of Coconut Shells in Ahmednagar</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-content">
-                                <h3>2025</h3>
-                                <p>oined the mission to evade pollution of Coconut Shells across many states & increased the recycling capacity</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-             <!-- Divider Section -->
-            <div class="styled-divider">
-                <div class="divider-line"></div>
-                <div class="divider-icon">♦</div>
-                <div class="divider-line"></div>
-            </div>
-            <!-- Why We? Section -->
-            <section class="section">
-                <div class="container">
-                    <h2 class="section-title">Why We?</h2>
-                    <div class="section-content">
-                        <p>The company is engaged in the Research & Development, Extraction, Trading & Processing of the Agricultural and Food Products. The company is highly specialised in processing of Coconuts like Extraction of Virgin Coconut Oil, Extra Virgin Coconut Oil with the shelf life of 5 years and other valuable products. The company is also indulged in trading of Agricultural commodities by making value addition.</p>
-                        <p>Under the mission "Clean City - Green City" we installed a Recycling Plant for Coconut Shells in Ahmednagar with a capacity of 3.0 Metric Tons/day.</p>
-                        <p>We collect & recycle the coconut shells with the help of the agencies outsourced at these cities across many states. Currently we are collecting and recycling coconut shells around 750 kgs/day. The recycled coconut shells are processed in such a way that they attain the final decomposition in 40 days or in the usable extent. The product is rich in natural fertilisers & nutrients which is supplied to the farmers on the subsidised rates which indirectly supports them for natural and organic farming.</p>
-                        <p>The company is interested in working at the bottom-most levels to reduce the pollution in many cities. So we have started our services for lifting the Coconut Shells across all cities of Maharashtra, Goa, Madhya Pradesh, Gujarat, Rajasthan, Delhi and Uttar Pradesh states.Ahmednagar city is geographically located between Mumbai, Pune, Thane, Nashik, Aurangabad (Chattrapati Sambhajinagar), Solapur, Beed & Dharashiv (Osmanabad).
-                            </p>
-                    </div>
-                </div>
-            </section>
-        </div>    
+    <div class="hero-product" style="background: linear-gradient(rgba(58,125,68,0.7),rgba(58,125,68,0.5)), url('images/coconut-hero.jpg') center/cover no-repeat; color: #fff; border-radius: 12px; margin-bottom: 40px; padding: 60px 30px 50px 30px; text-align: center;">
+        <h1 style="color: var(--primary-color); font-size: 48px; margin-bottom: 20px;">No Additives, No Preservatives, No Chemicals</h1>
+        <p style="font-size: 1.25em; max-width: 700px; margin: 0 auto;">RECYCLERS OF COCONUT SHELLS</p>
     </div>
+
+    <div class="container">
+        <!-- HOME PAGE CONTENT -->
+        <section class="section" style="background: #f8f9fa; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 36px 24px; margin-bottom: 40px;">
+            <h2 class="section-title" style="color: var(--primary-color); text-align: center; margin-bottom: 30px; font-size: 2em;">About Us</h2>
+            <div class="section-content" style="font-size: 1.08em; text-align: justify;">
+                <p>
+                    <span>NYSE Agri & Food Private Limited, incorporated in 2017 (CIN: U74999PN2017PTC171054), is a DPIIT-certified startup recognized under the Startup India program (DIPP132914). Our company is dedicated to the research, development, extraction, trading, and processing of high-quality agricultural and food products.</span><br><br>
+                    <span>Our main agenda is "No Additives,No Preservatives,No Chemicals" in the products.</span>
+                    <span>We have built a strong reputation in the coconut processing industry by producing premium-grade Virgin and Extra Virgin Coconut Oil with an extended shelf life of 5 years. In addition to oil extraction, we create various value-added coconut products using the finest coconuts available.</span>
+                    <span>From day one, we have been mindful of the environmental challenges posed by agricultural waste—particularly coconut shells, which are often burnt and release harmful gases like carbon dioxide and methane. In response, we've turned this problem into an opportunity.</span><br><br>
+                    <span>In 2024, we Setup a Coconut Shell Recycling Plant in Ahilyanagar (formerly Ahmednagar), Maharashtra, with an initial recycling capacity of 750 kg/day. Due to increased demand and positive community response, we proudly scaled our operations to 3000 kg/day as of April 1, 2025.</span>
+                    <span>This expansion is part of our larger mission: "Clean City – Green City." We are committed to reducing pollution caused by coconut waste and preserving natural resources by promoting responsible recycling practices at scale.</span><br><br>
+                    <span>Our collection network now spans across several states, including Maharashtra, Goa, Madhya Pradesh, Gujarat, Rajasthan, Delhi, and Uttar Pradesh. Through these efforts, we support local employment, reduce environmental hazards, and contribute to a more sustainable future.</span>
+                    <span>To encourage participation, we offer a payment of up to ₹11.50 per kg for coconut shells. This initiative helps individuals and communities generate income, support green practices, and take part in a growing eco-conscious movement.</span><br><br>
+                    <span>We are proud to call ourselves the "Recyclers of Coconut Shells." Our commitment extends beyond business—we aim to make a positive impact on society, the environment, and future generations.</span>
+                </p>
+            </div>
+        </section>
+        <!-- Divider Section -->
+        <div class="styled-divider">
+            <div class="divider-line"></div>
+            <div class="divider-icon">♦</div>
+            <div class="divider-line"></div>
+        </div>
+        <!-- Journey Section -->
+        <section class="section" style="background: #f8f9fa; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 36px 24px; margin-bottom: 40px;">
+            <h2 class="section-title" style="color: var(--primary-color); text-align: center; margin-bottom: 30px; font-size: 2em;">Our Journey</h2>
+            <div class="timeline" style="margin-bottom: 20px;">
+                <div class="timeline-item"><div class="timeline-content"><h3>2017</h3><p>Incorporation of Company</p></div></div>
+                <div class="timeline-item"><div class="timeline-content"><h3>2018</h3><p>Identification of World's Best Coconuts</p></div></div>
+                <div class="timeline-item"><div class="timeline-content"><h3>2019</h3><p>Research & Development on the Best Coconuts</p></div></div>
+                <div class="timeline-item"><div class="timeline-content"><h3>2020</h3><p>Developed the Wet Process for Extraction of Transparent Coconut Oil from Coconut Milk</p></div></div>
+                <div class="timeline-item"><div class="timeline-content"><h3>2021-2023</h3><p>Worked to Increase Shelf life of the Virgin Coconut Oil</p></div></div>
+                <div class="timeline-item"><div class="timeline-content"><h3>2024</h3><p>Succeeded in Increasing the Shelf Life of Coconut Oil to 5 Years. Also worked against the Pollution of Coconut Shells in Ahmednagar</p></div></div>
+                <div class="timeline-item"><div class="timeline-content"><h3>2025</h3><p>Joined the mission to evade pollution of Coconut Shells across many states & increased the recycling capacity</p></div></div>
+            </div>
+            <div class="timeline-content" style="text-align: center;">
+                <h3>OUR AGENDA</h3>
+                <p style="text-align: center;font-weight: bold;">No Additives,No Preservatives,No Chemicals</p>
+            </div>
+        </section>
+         <!-- Divider Section -->
+        <div class="styled-divider">
+            <div class="divider-line"></div>
+            <div class="divider-icon">♦</div>
+            <div class="divider-line"></div>
+        </div>
+        <!-- Why We? Section -->
+        <section class="section" style="background: #f8f9fa; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 36px 24px; margin-bottom: 40px;">
+            <h2 class="section-title" style="color: var(--primary-color); text-align: center; margin-bottom: 30px; font-size: 2em;">Why We?</h2>
+            <div class="section-content" style="font-size: 1.08em; text-align: justify;">
+                <p>The company is engaged in the Research & Development, Extraction, Trading & Processing of the Agricultural and Food Products. The company is highly specialised in processing of Coconuts like Extraction of Virgin Coconut Oil, Extra Virgin Coconut Oil with the shelf life of 5 years and other valuable products. The company is also indulged in trading of Agricultural commodities by making value addition.</p>
+                <p>Under the mission "Clean City - Green City" we installed a Recycling Plant for Coconut Shells in Ahmednagar with a capacity of 3.0 Metric Tons/day.</p>
+                <p>We collect & recycle the coconut shells with the help of the agencies outsourced at these cities across many states. Currently we are collecting and recycling coconut shells around 750 kgs/day. The recycled coconut shells are processed in such a way that they attain the final decomposition in 40 days or in the usable extent. The product is rich in natural fertilisers & nutrients which is supplied to the farmers on the subsidised rates which indirectly supports them for natural and organic farming.</p>
+                <p>The company is interested in working at the bottom-most levels to reduce the pollution in many cities. So we have started our services for lifting the Coconut Shells across all cities of Maharashtra, Goa, Madhya Pradesh, Gujarat, Rajasthan, Delhi and Uttar Pradesh states. Ahmednagar city is strategically and centrally located between Mumbai, Pune, Thane, Nashik, Aurangabad (Chattrapati Sambhajinagar), Solapur, Beed & Dharashiv (Osmanabad).</p>
+            </div>
+        </section>
+    </div>    
     
     <!-- Footer -->
     <footer>
@@ -518,16 +481,11 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Contact Us</h3>
-                    <p>Email: nyseagrifood@gmail.com</p>
-                    <p>Phone: +91 99754 - 22754</p>
+                    <p>Email: nyseagrifood1@gmail.com</p>
+                    <p>Phone: +91 86028-10170</p>
                     <p>Address:</p>
-                    <p>S.no.10 ,PLOT NO. 62 & 63
-                        </p>
-                        <p>
-                        60 feet road, near Talathi office,
-                        </p>
+                    <p>Jai Bhavani Nagar, Sambhaji Nagar, Bhistabag, Ahmadnagar, Maharashtra 414003</p>
                         
-                    <p>Bhistbaug, Ahmednagar - 414003</p>
                     <p>Maharashtra, India</p>
                 </div>
                 
@@ -535,21 +493,23 @@
                     <h3>Quick Links</h3>
                     <a href="Home.html">Home</a>
                     <a href="opportunity.html">Opportunities</a>
-                    <a href="apply.html">Apply Now</a>
+                    <a href="product.html">Product</a>
+                    <a href="apply.html">Contact Us</a>
                 </div>
                 
                 <div class="footer-section">
                     <h3>Our Location</h3>
                     <div class="map-container">
                         <!-- Map integration -->
-                        <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d861.4235843423755!2d74.72537119978685!3d19.12306990000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdcbb9dba6206e3%3A0xf4cb5674d05dfb11!2sTalathi%20Office%20Savedi%20Bhistbag!5e1!3m2!1sen!2sin!4v1744029286784!5m2!1sen!2sin" 
-                            width="100%" 
-                            height="100%" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy">
-                        </iframe>
+<iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.4197967428204!2d74.73118617520684!3d19.136231682080783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdcbb8ce69fc8b1%3A0x5e1898d85940f231!2sNYSE%20AGRI%20AND%20FOOD%20Pvt.Ltd.!5e1!3m2!1sen!2sin!4v1748607125574!5m2!1sen!2sin"
+    width="100%"
+    height="100%"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
                     </div>
                 </div>
             </div>

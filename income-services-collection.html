@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franchisee: Services-Collection Income Table</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f8f9fa; color: #333; margin: 0; }
+        .container { max-width: 800px; margin: 40px auto; background: #fff; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.08); padding: 30px; }
+        .income-header { background: #ffc107; padding: 15px 20px; text-align: center; font-size: 24px; font-weight: bold; border-radius: 10px 10px 0 0; }
+        .fee-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #eee; }
+        .description { margin: 15px 0; line-height: 1.6; }
+        .income-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .income-table th, .income-table td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
+        .income-table th { background-color: #f8f9fa; }
+        .income-note { margin-top: 15px; padding: 10px; background-color: #f8f9fa; border-radius: 4px; font-size: 14px; }
+        .back-link { display: inline-block; margin-top: 30px; color: #3a7d44; text-decoration: none; font-weight: bold; }
+        .back-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="opportunity.html" class="back-link" style="margin-bottom: 20px; margin-top: 0; display: inline-block;">&larr; Back to Opportunities</a>
+        <div class="income-header">FRANCHISEE : SERVICES - COLLECTION</div>
+        <div class="fee-row">
+            <strong>Franchisee Fee (Refundable):</strong>
+            <span>Rs. 50000</span>
+        </div>
+        <div class="description">
+            We buy the Coconut Shells @ Rs 10/- Kgs of your Franchisee Point. Franchisee will Purchase the Coconut Shells from the Source @ Rs. 4/- per Kgs. A margin of Rs. 6/- per Kgs will be loaded by the Franchisee Point. Franchisee Point will raise an invoice for the payment @ Rs. 10/- per kgs. The Franchisee Point has to supply the coconut shells to the C&F Point.
+        </div>
+        <button id="download-pdf" style="margin-bottom:20px; background:#3a7d44; color:#fff; border:none; border-radius:6px; padding:10px 22px; font-weight:bold; cursor:pointer;">Download as PDF</button>
+        <table class="income-table" id="income-table">
+            <thead>
+                <tr>
+                    <th>Particulars</th>
+                    <th>Kgs</th>
+                    <th>Kgs</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Average Daily Collection of Shells</td>
+                    <td>200</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>Margin in Rs./per Kg.</td>
+                    <td>6</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>Daily Income in Rs.</td>
+                    <td>1200</td>
+                    <td>3000</td>
+                </tr>
+                <tr>
+                    <td>Monthly Income in Rs.</td>
+                    <td>36000</td>
+                    <td>90000</td>
+                </tr>
+                <tr>
+                    <td>Annual Income in Rs.</td>
+                    <td>432000</td>
+                    <td>1080000</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="income-note">
+            ***Franchisee Point can earn additional Rs. 1.50/- per Kg. for the collected material if sent directly to the Central HUB Ahmednagar
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+    document.getElementById('download-pdf').onclick = function() {
+        const container = document.getElementsByClassName('container')[0];
+        html2pdf().set( {
+            margin: 0.5,
+          filename: 'income-services-collection.pdf',
+          image: { type: 'jpeg', quality: 0.98 },
+          html2canvas: { scale: 2 },
+          jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+      }).from(container).save();
+    };
+    </script>
+</body>
+</html> 

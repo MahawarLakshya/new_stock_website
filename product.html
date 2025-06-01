@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYSE Agri & Food Private Limited-Product</title>
+    <style>
+        :root {
+            --primary-color: #3a7d44;
+            --secondary-color: #6fb77e;
+            --accent-color: #d4e9d7;
+            --dark-color: #2c3e50;
+            --light-color: #f8f9fa;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--light-color);
+            color: #333;
+            margin: 0;
+        }
+        nav {
+            background-color: var(--primary-color);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .brand {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        .navbar-logo {
+            height: 40px;
+            width: auto;
+            margin-right: 10px;
+            vertical-align: middle;
+            border-radius: 50%;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        .nav-links li {
+            margin-left: 20px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 10px;
+            border-radius: 4px;
+            transition: background-color 0.1s;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            background-color: var(--secondary-color);
+        }
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+            padding: 40px 30px 30px 30px;
+        }
+        h1, h2, h3 {
+            color: var(--primary-color);
+        }
+        .product-section {
+            margin-bottom: 60px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            background: var(--accent-color);
+            border-radius: 14px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            padding: 32px 24px;
+            transition: box-shadow 0.2s;
+        }
+        .product-section:nth-child(even) {
+            flex-direction: row-reverse;
+            background: #f3f7f4;
+        }
+        .product-image-group {
+            flex: 1 1 320px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            align-items: center;
+        }
+        .product-image-group img {
+            max-width: 260px;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+            background: #fff;
+        }
+        .product-info {
+            flex: 2 1 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .product-info h2 {
+            margin-top: 0;
+            margin-bottom: 18px;
+        }
+        .product-description {
+            margin-bottom: 18px;
+            text-align: justify;
+            font-size: 1.08em;
+        }
+        .anchor-link {
+            color: var(--primary-color);
+            text-decoration: underline;
+            font-weight: 500;
+        }
+        .product-section:hover {
+            box-shadow: 0 6px 18px rgba(58,125,68,0.10);
+        }
+        @media (max-width: 900px) {
+            .product-section { flex-direction: column !important; gap: 20px; padding: 24px 8px; }
+            .product-image-group { flex-direction: row; gap: 10px; justify-content: center; }
+            .product-image-group img { max-width: 160px; }
+        }
+        @media (max-width: 600px) {
+            .container { padding: 8px; }
+            .product-section { padding: 12px 2vw; }
+            .product-info h2 { font-size: 1.2em; }
+        }
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+        .container-footer {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            background-color: var(--dark-color);
+        }
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        .footer-section {
+            flex: 1 0 300px;
+            margin-bottom: 30px;
+        }
+        .footer-section h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+        }
+        .footer-section p, .footer-section a {
+            color: #bbb;
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+        }
+        .footer-section a:hover {
+            color: white;
+        }
+        .map-container {
+            height: 200px;
+            background-color: #4a4a4a;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #4a4a4a;
+            color: #bbb;
+        }
+        @media (max-width: 900px) {
+            .footer-content {
+                flex-direction: column;
+                gap: 0;
+                align-items: stretch;
+            }
+            .footer-section {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <img src="images/logo.png" alt="NYSE Agri & Food Logo" class="navbar-logo">
+                NYSE Agri & Food Private Limited
+            </a>
+            <ul class="nav-links">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="opportunity.html">Opportunities</a></li>
+                <li><a href="product.html" class="active">Product</a></li>
+                <li><a href="apply.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="hero-product" style="background: linear-gradient(rgba(58,125,68,0.7),rgba(58,125,68,0.5)), url('images/coconut-hero.jpg') center/cover no-repeat; color: #fff; border-radius: 12px; margin-bottom: 40px; padding: 60px 30px 50px 30px; text-align: center;">
+        <h1 style="color: var(--primary-color); font-size: 2.8em; margin-bottom: 18px; letter-spacing: 1px;">Our Premium Coconut Products</h1>
+        <p style="font-size: 1.25em; max-width: 700px; margin: 0 auto;">Discover the natural goodness and versatility of coconut-based products for health, beauty, and sustainable living. Explore our range below!</p>
+    </div>
+    <div class="container">
+        <!-- Coconut Shell Powder -->
+        <section class="product-section" id="coconut-shell-powder" style="flex-direction: row-reverse;">
+            <div class="product-image-group">
+                <img src="images/Coconut Shell - Round Cups.png" alt="Coconut Shell - Round Cups">
+                <img src="images/Coconut Shell Powder.png" alt="Coconut Shell Powder">
+            </div>
+            <div class="product-info">
+                <h2>Coconut Shell Powder</h2>
+                <div class="product-description">
+                    Coconut shell powder is obtained by grinding &amp; pulverising of the Coconut Shells. Coconut shell powder is a beneficial soil conditioner which improves soil structure, retains water and absorbs nutrients. It is also helpful in controlling the pH value of soil. It is widely used as a substrate in horticulture and agriculture for seed germination and plant growth. The nitrates and nitrites formed in air due to lightning are absorbed by this soil through water or air as medium. Coconut shell powder, when mixed in proportion with lime effectively stabilizes expansive soil, increases dry density and reduces its swelling and shrinking. Due to such properties of coconut shell powder, it supports organic farming &amp; natural fertilisers when added to soil helps plant growth effectively.
+                </div>
+            </div>
+        </section>
+        <!-- Virgin Coconut Oil -->
+        <section class="product-section" id="virgin-coconut-oil" style="flex-direction: row; background: var(--accent-color);">
+            <div class="product-image-group">
+                <img src="images/Virgin Coconut Oil.png" alt="Virgin Coconut Oil">
+                <img src="images/Virgin Coconut Oil Bottle.png" alt="Virgin Coconut Oil Bottle">
+            </div>
+            <div class="product-info">
+                <h2>Virgin Coconut Oil (VCO)</h2>
+                <div class="product-description">
+                    <strong>"Coco Pearl" - Virgin Coconut Oil</strong> is extracted from the coconuts by the cold process i.e. from coconut milk cream. "Coco Pearl" - Virgin Coconut Oil is extracted with strict principles and discipline wherein no chemicals or no preservatives or no additives are used. The Oil is clarified physically in natural way. A very small sediment at the bottom is formed of coconut milk cream which is natural &amp; does not affect shelf life or quality of the product. Due to precise process followed for extraction of "Coco Pearl" - Virgin Coconut Oil the shelf life obtained is 5 years. Coco Pearl – Virgin coconut oil is a extreme versatile product &amp; has antioxidant, antibacterial &amp; antifungal properties which works inside and outside the body. Boosts Metabolism, heals variety of body ailments, Tastes great and feels good on skin. Readily absorbs in no time. The extracted oil is edible, is widely used in Pharmaceutical / Ayurveda for numerous &amp; various serious health issues, hair care, health care and many serious ailments. It gives an ultimate quality and best health results. "Coco Pearl" - Virgin Coconut Oil when stored in Cool Place, Non-humid &amp; away from direct sunlight provides ultimate results at optimum level. "Coco Pearl" - Virgin Coconut Oil never split in layers &amp; solidifies below 24˚. VCO Improves Brain Function &amp; Helps in Recovery From Epilepsy and Alzheimer. Besides, the oil has varied industrial applications. It is used in the manufacture of toilet soaps, laundry soaps, surface active agents and detergents, hair tonics, cosmetics, etc. It is used throughout the country as a hair oil as it helps growth of the hair. As a massage oil it has a cooling effect on the body. Owing to these qualities VCO is widely used. <br><br>
+                    A Brochure is provided with every bottle for all the customers to know the real miraculous use of Virgin Coconut Oil.
+                    <br><br>
+                    <a href="vco-health-benefits.html" class="anchor-link" target="_blank" style="display:inline-block;padding:10px 22px;background:#3a7d44;color:#fff;border-radius:6px;text-decoration:none;font-weight:bold;margin-top:10px;">Health Benefits of Virgin Coconut Oil</a>
+                </div>
+            </div>
+        </section>
+        <!-- MCT Oil -->
+        <section class="product-section" id="mct-oil" style="flex-direction: row-reverse;">
+            <div class="product-image-group">
+                <img src="images/MCT Oil.png" alt="MCT Oil">
+            </div>
+            <div class="product-info">
+                <h2>MCT Oil (Medium Chain Triglyceride Oil)</h2>
+                <div class="product-description">
+                    MCT Oil is a good energy source, affects body composition &amp; weight, Burns Body fat for energy, helps in recovery in Epilepsy, Alzheimer disease, and Autism, fight yeast and bacterial growth, manages Blood Sugar Level. MCT Oil is extracted from the fatty acids present in Virgin Coconut Oil, which contains medium-length chains of fats called as triglycerides. MCTs are found in palm kernel oil and coconut oil and are separated by fractionation. MCT oils supports excess calorie burning and results in weight loss. MCTs do not require bile salts for absorption. Patients having malnutrition, malabsorption or particular fatty-acid metabolism disorders are treated with MCTs oil because MCTs oil do not require energy for absorption, use, or storage. MCT Oils are good biologically inert source of energy that the human body finds reasonably easy to metabolize. MCT Oils moderately elevate blood ketones which are effective in treatment of Epilepsy.<br><br>
+                    <strong>Four Medium Chain Fatty Acids present in MCT Oil are:</strong><br>
+                    Caproic Acid (C6)<br>
+                    Caprylic Acid (C8)<br>
+                    Capric Acid (C10)<br>
+                    Lauric Acid (C12)
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="container-footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: nyseagrifood1@gmail.com</p>
+                    <p>Phone: +91 86028-10170</p>
+                    <p>Address:</p>
+                    <p>Jai Bhavani Nagar, Sambhaji Nagar, Bhistabag, Ahmadnagar, Maharashtra 414003</p>
+                    <p>Maharashtra, India</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="Home.html">Home</a>
+                    <a href="opportunity.html">Opportunities</a>
+                    <a href="product.html">Product</a>
+                    <a href="apply.html">Contact Us</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Our Location</h3>
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.4197967428204!2d74.73118617520684!3d19.136231682080783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdcbb8ce69fc8b1%3A0x5e1898d85940f231!2sNYSE%20AGRI%20AND%20FOOD%20Pvt.Ltd.!5e1!3m2!1sen!2sin!4v1748607125574!5m2!1sen!2sin"
+                            width="100%"
+                            height="100%"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 NYSE Agri & Food Pvt. Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
